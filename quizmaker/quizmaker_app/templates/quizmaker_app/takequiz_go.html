@@ -1,0 +1,21 @@
+<html>
+<body>
+
+
+<h1> Quiz #{{ quiz_id }} </h1>
+
+
+{% for question in quiz.question_set.all %}
+<h3> {{ question.question_text }} </h3>
+
+<ol type ='A'>
+{% for answer in question.answer_set.all %}
+<li> {{ answer.answer_text }} </li>
+{% endfor %}
+</ol>
+
+{% endfor %}
+
+
+</body>
+</html>
